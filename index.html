@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de usúarios</title>
-    <style></style>
+    <title>Cadastro de Usuários</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <div id="listRegistros">
@@ -16,35 +17,40 @@
                     <th>Telefone</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="listRegistrosBody"></tbody>
         </table>
-
-    </div>
-    <div id="cadastroRegistro">
-        <div class="label">
-           </div>
-            <div class="label">
-                <div>ID</div>
-                <div>
-                    <input type="number">
-                </div>
-
-            <div class="label">
-                <div>Nome</div>
-                <div>
-                    <input type="Nome">
-                </div>
-
-            <div class="label">
-                <div>Telefone</div>
-                <div>
-                    <input type="Telefone">
-                
-                </div>
-          </div>
+        <div>
+            <button onclick="vizualizar('cadastro')">Novo Usuário</button>
         </div>
     </div>
 
-    
+    <div id="cadastroRegistros">
+        <form id = "formCadastro">
+        <div class="label">
+            <div>ID</div>
+            <div>
+                <input type="number" id="id" placeholder="Digite o ID">
+            </div>
+        </div>
+        <div class="label">
+            <div>Nome</div>
+            <div>
+                <input type="text" id="nome" placeholder="Digite o Nome">
+            </div>
+        </div>
+        <div class="label">
+            <div>Telefone</div>
+            <div>
+                <input type="text" id="telefone" placeholder="Digite o Telefone">
+            </div>
+        </div>
+        <div>
+            <button type="submit">Salvar</button>
+            <button onclick="vizualizar('lista')" class="cinza" type="button">Cancelar</button>
+        </div>
+    </form>
+    </div>
+
+
 </body>
 </html>
